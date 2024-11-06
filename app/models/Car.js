@@ -18,7 +18,7 @@ export class Car {
 
   get Card() {
     return `
-         <div class="col-md-4">
+         <div class="col-md-4 bg-dark">
          <div class="card shadow-sm">
            <img class="card-img p-2"
              src="${this.imgUrl}"
