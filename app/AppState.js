@@ -1,8 +1,24 @@
 import { Car } from './models/Car.js'
+import { House } from './models/Houses.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
 class ObservableAppState extends EventEmitter {
+
+  houses = [
+    new House({
+      type: 'House',
+      bed: 4,
+      bath: 2,
+      sqft: 6339,
+      acres: 4.02,
+      price: 467000,
+      buyrent: 'Purchase',
+      imgURL: 'https://images.unsplash.com/photo-1452626212852-811d58933cae?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8fDA%3D'
+    })
+  ]
+
+
 
   cars = [
     new Car({

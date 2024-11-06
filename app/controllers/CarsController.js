@@ -19,6 +19,11 @@ export class CarsController {
 
   createCarListing() {
     event.preventDefault() // prevent the default form submission event
+    /**
+     * @type {HTMLFormElement}
+     */
+
+    // @ts-ignore
     const formElm = event.target
     console.log('Creating a Car', formElm);
     console.log(formElm.make.value);

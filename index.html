@@ -44,7 +44,7 @@
     <form onsubmit="app.HousesController.createHouseListing()"
       class="row g-4 bg-white p-4 rounded shadow-sm my-3 bg-primary text-light">
       <div>
-        <h2>List Your Car</h2>
+        <h2>List Your House</h2>
       </div>
       <div class="col-md-4">
         <label for="house-type">Type</label>
@@ -60,19 +60,19 @@
       </div>
       <div class="col-md-4">
         <label for="house-sqft">Sqft</label>
-        <input required id="house-sqft" name="color" type="text" class="form-control">
+        <input required id="house-sqft" name="sqft" type="text" class="form-control">
       </div>
       <div class="col-md-4">
         <label for="house-acres">Acres</label>
-        <input required id="house-acres" name="color" type="text" class="form-control">
+        <input required id="house-acres" name="achres" type="text" class="form-control">
       </div>
       <div class="col-md-4">
         <label for="house-price">Price</label>
-        <input required id="house-price" name="color" type="text" class="form-control">
+        <input required id="house-price" name="price" type="text" class="form-control">
       </div>
       <div class="col-md-4">
         <label for="house-buy-rent">Buy/Rent</label>
-        <input required id="house-buy-rent" name="color" type="text" class="form-control">
+        <input required id="house-buy-rent" name="buy-rent" type="text" class="form-control">
       </div>
       <div class="col-md-4">
         <label for="house-imgUrl">Picture</label>
@@ -88,7 +88,7 @@
 
     <!-- SECTION house cards go here -->
     <section id="house-listings" class="row bg-dark">
-
+      <!-- 
       <div class="col-md-4">
         <div class="card shadow-sm">
           <img class="house-img p-2"
@@ -96,74 +96,75 @@
             alt="">
           <div class="card-body">
             <p class="text-center fw-bold">
-              Jaguar XE 2017
+              House
             </p>
             <p class="mb-0">
-              black
+              $390,000
             </p>
           </div>
         </div>
+      </div> -->
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- --- -->
+    <!-- SECTION car form -->
+    <form onsubmit="app.CarsController.createCarListing()"
+      class="row g-4 bg-white p-4 rounded shadow-sm my-3 bg-primary text-light">
+      <div>
+        <h2>List Your Car</h2>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- --- -->
-      <!-- SECTION car form -->
-      <form onsubmit="app.CarsController.createCarListing()"
-        class="row g-4 bg-white p-4 rounded shadow-sm my-3 bg-primary text-light">
-        <div>
-          <h2>List Your Car</h2>
-        </div>
-        <div class="col-md-4">
-          <label for="car-make">Make</label>
-          <input required id="car-make" name="make" type="text" minlength="2" maxlength="25" class="form-control">
-        </div>
-        <div class="col-md-4">
-          <label for="car-model">Model</label>
-          <input required id="car-model" name="model" type="text" minlength="1" , maxlength="25" class="form-control">
-        </div>
-        <div class="col-md-4">
-          <label for="car-year">Year</label>
-          <input required id="car-year" name="year" type="number" min="1885" max="2025" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label for="car-imgUrl">Picture</label>
-          <input required id="car-imgUrl" name="imgUrl" type="url" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <label for="car-color">Color</label>
-          <input required id="car-color" name="color" type="color" class="form-control">
-        </div>
-        <div class="col-md-12">
-          <label for="car-mileage">Mileage</label>
-          <input required id="car-mileage" name="mileage" type="range" min="0" max="303000" step="100"
-            class="form-control">
-        </div>
-        <!-- <div class="col-md-12">
+      <div class="col-md-4">
+        <label for="car-make">Make</label>
+        <input required id="car-make" name="make" type="text" minlength="2" maxlength="25" class="form-control">
+      </div>
+      <div class="col-md-4">
+        <label for="car-model">Model</label>
+        <input required id="car-model" name="model" type="text" minlength="1" , maxlength="25" class="form-control">
+      </div>
+      <div class="col-md-4">
+        <label for="car-year">Year</label>
+        <input required id="car-year" name="year" type="number" min="1885" max="2025" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label for="car-imgUrl">Picture</label>
+        <input required id="car-imgUrl" name="imgUrl" type="url" class="form-control">
+      </div>
+      <div class="col-md-6">
+        <label for="car-color">Color</label>
+        <input required id="car-color" name="color" type="color" class="form-control">
+      </div>
+      <div class="col-md-12">
+        <label for="car-mileage">Mileage</label>
+        <input required id="car-mileage" name="mileage" type="range" min="0" max="303000" step="100"
+          class="form-control">
+      </div>
+      <!-- <div class="col-md-12">
         <label for="car-isRunning">Is Running</label>
         <input id="car-isRunning" name="isRunning" type="checkbox" class="form-checkbox">
       </div> -->
-        <div class="text-end">
-          <button class="btn btn-success shadow" type="submit">Submit</button>
-        </div>
-      </form>
+      <div class="text-end">
+        <button class="btn btn-success shadow" type="submit">Submit</button>
+      </div>
+    </form>
 
 
 
-      <!-- SECTION car cards go here -->
-      <section id="car-listings" class="row">
+    <!-- SECTION car cards go here -->
+    <section id="car-listings" class="row">
 
-        <!-- <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <div class="card shadow-sm">
           <img class="card-img p-2"
             src="https://plus.unsplash.com/premium_photo-1664304400278-8152cba3da20?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8amFndWFyfGVufDB8fDB8fHww"
@@ -179,8 +180,8 @@
         </div>
       </div> -->
 
-      </section>
-      <!-- <section id="router-view"></section> -->
+    </section>
+    <!-- <section id="router-view"></section> -->
   </main>
 
 
